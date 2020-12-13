@@ -4,6 +4,7 @@
   --main-font: "Roboto", sans-serif;
   --secondary-font: "Raleway", sans-serif;
   --icon-color: #AFB1B8;
+  --timing-fn: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -104,11 +105,13 @@ img {
   display: inline-flex;
   margin-right: 10px;
   fill: #757575;
+  transition: fill 250ms var(--timing-fn);
 }
 .tel-logo{
   margin-right: 10px;
   margin-left: 30px;
   fill: #757575;
+  transition: fill 250ms var(--timing-fn);
 }
 }
 .header-contact-tel {
@@ -135,6 +138,7 @@ img {
   color: #212121;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color 250ms var(--timing-fn);
   /* display: block; */
 
 }
@@ -178,6 +182,9 @@ img {
   letter-spacing: 0.02em;
   color: #757575;
   font-style: normal;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: all 250ms var(--timing-fn);
 }
 /* ======================= Шапка =====================*/
 /* ======================= Герой =====================*/
@@ -225,6 +232,7 @@ img {
   border-radius: 4px;
   cursor: pointer;
   padding: 10px 32px;
+  border: none;
 
   font-weight: 700;
   font-size: 16px;
@@ -300,9 +308,29 @@ margin-bottom: 30px;
 .about-item:not(:last-child) {
   margin-right: 30px;
 }
-
-
-
+.about-item-description{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  padding: 27px 82px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+ .about-item{
+  position: relative;
+  
+}
 .about-title,
 .team-title {
   margin-bottom: 50px;
@@ -358,10 +386,11 @@ display: flex;
   align-items: center;
   margin-bottom: 30px;
   border-radius: 50%;
+ 
 }
 .team-link-icon{
   fill: #AFB1B8;
-
+ transition: fill 250ms var(--timing-fn);
 }
 .team-list-item{
 display: flex;
@@ -370,6 +399,7 @@ align-items: center;
 width: 44px;
 height: 44px;
 border-radius: 50%;
+ transition: background-color 250ms var(--timing-fn);
 }
 .team-list-item:hover .team-link-icon,
 .team-list-item:focus .team-link-icon{
@@ -410,7 +440,8 @@ border-radius: 50%;
     height: 90px;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
-    color: var(--icon-color)
+    color: var(--icon-color);
+    transition: all 250ms var(--timing-fn);
 }
 .clients-icon{
   height: 50px;
@@ -452,6 +483,7 @@ border-radius: 50%;
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms var(--timing-fn);
 }
 .footer-contact-mail:hover,
 .footer-contact-mail:focus,
@@ -505,12 +537,14 @@ width: 44px;
 height: 44px;
 border-radius: 50%;
 background-color: rgba(255, 255, 255, 0.1);
+transition: background-color 250ms var(--timing-fn);
 
 }
 .adress-link-icon{
   width: 20px;
   height: 20px;
   fill: #ffffff;
+  transition: fill 250ms var(--timing-fn);
 }
 .adress-list-item:not(:last-child){
   margin-right: 10px;
@@ -529,29 +563,36 @@ background-color: rgba(255, 255, 255, 0.1);
 /* ======================= Портфолио =============*/
 /* ======================= Радио кнопки =============*/
 .radio-btn {
+  align-items: center;
+  padding: 6px 22px;
+  min-width: 128px;
+  height: 38px;
+  
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
+
+  border: none;
   color: #212121;
   background-color: #f5f4fa;
-  align-items: center;
-  padding: 6px 22px;
-  min-width: 128px;
-  height: 38px;
-  background: #F5F4FA;
   border-radius: 4px;
-  border-color: transparent;
+
+  cursor: pointer;
+  transition: all 250ms var(--timing-fn);
 }
 .radio-btn:hover,
 .radio-btn:focus {
-  font-family: var(--main-font);
   color: #ffffff;
   background-color: var(--accent-color);
-  border-color: var(--accent-color)
-  border-color: transparent;
+  border-color: var(--accent-color); 
+  box-shadow: 
+   0px 3px 1px rgba(0, 0, 0, 0.1),
+   0px 1px 2px rgba(0, 0, 0, 0.08),
+   0px 2px 2px rgba(0, 0, 0, 0.12);
+   border-radius: 4px;
 }
 .radio-btn-list {
   display: flex;
@@ -577,6 +618,7 @@ background-color: rgba(255, 255, 255, 0.1);
   
   background: #FFFFFF;
   border: 1px solid #EEEEEE;
+  transition: all 250ms var(--timing-fn);
 }
 
 .portfolio-item:nth-child(3n){
