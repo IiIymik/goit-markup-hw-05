@@ -665,7 +665,7 @@ border: 1px solid #EEEEEE;
   background-color:rgba(33, 150, 243, 0.9);
   color: white;
   padding: 63px 24px;
-  transition: transform 500ms linear;
+  transition: transform 250ms linear;
   transform: translateY(100%);
 
   font-family: var(--main-font);
